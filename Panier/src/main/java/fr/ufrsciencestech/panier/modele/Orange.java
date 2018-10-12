@@ -11,44 +11,44 @@ import java.util.Scanner;
  *
  * @author ar948052
  */
-public class Orange {
+public class Orange extends Fruit{
     private double prix;
     private String origine;
     
-    public double getPrix(){
+    
+    /*public double getPrix(){
         return prix;
     }
     
     public String getOrigine(){
         return origine;
-    }
+    }*/
     
-    public Orange(){
+    /*public Orange(){
         origine = "vide";
         prix = 1.0;
-    }
+    }*/
     
     public Orange (double p, String o) {
-            origine = o;
-            prix = prixPositif(p);
+           super(o,p);
     }
     
-    private double prixPositif(double p){
+    /*private double prixPositif(double p){
         Scanner scn = new Scanner(System.in);
         while(p<0.0){
             System.out.println("Le prix doit etre positif");
             p = scn.nextDouble();
         }
         return p;
-    }
+    }*/
     
-    @Override
+    /*@Override
     public String toString(){
         String s = "Prix: " + prix + "\nOrigine:" + origine;
         return s;
-    }
+    }*/
     
-    @Override
+    /*@Override
     public boolean equals(Object obj){
         Orange o;
         if(obj.getClass() == this.getClass()){
@@ -56,5 +56,5 @@ public class Orange {
             return this.prix == o.prix && this.origine.equals(o.origine);
         }
         return false;
-    }
+    }*/
 }
