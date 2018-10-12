@@ -44,7 +44,7 @@ public class FenetreAWT extends Frame implements Observer{
         this.add(moins);
         this.add(l);
         
-        ControllerButton cb = new ControllerButton(p);  
+        ControllerButton cb = new ControllerButton(p,"");  
         plus.addActionListener(cb);
         moins.addActionListener(cb);
         

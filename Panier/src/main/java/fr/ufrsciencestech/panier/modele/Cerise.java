@@ -23,14 +23,10 @@ public class Cerise extends Fruit{
         return origine;
     }
     
-    public Cerise(){
-        origine = "vide";
-        prix = 1.0;
-    }
+    
     
     public Cerise (double p, String o) {
-            origine = o;
-            prix = prixPositif(p);
+            super(o,p);
     }
     
     private double prixPositif(double p){

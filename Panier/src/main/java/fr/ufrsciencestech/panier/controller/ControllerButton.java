@@ -19,7 +19,7 @@ public class ControllerButton implements ActionListener{
 
     Panier p;
     
-    public ControllerButton(Panier p){
+    public ControllerButton(Panier p,String t){
         this.p = p;
     }
     
@@ -39,7 +39,7 @@ public class ControllerButton implements ActionListener{
                 
         }*/
         
-        if(jb.getName().equals("plus")) p.ajouter(new Orange());
+        if(jb.getName().equals("plus")) p.ajouter(new Orange(5.0,"oui"));
         if(jb.getName().equals("moins")) p.retirer();
     }
     

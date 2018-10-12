@@ -25,7 +25,7 @@ public class FenetreSwing extends javax.swing.JFrame implements Observer{
     public FenetreSwing(Panier p) {
         initComponents();
         panier = p;
-        ControllerButton cb = new ControllerButton(panier);
+        ControllerButton cb = new ControllerButton(panier,"");
         jButtonPlus.addActionListener(cb);
         jButtonMoins.addActionListener(cb);
         

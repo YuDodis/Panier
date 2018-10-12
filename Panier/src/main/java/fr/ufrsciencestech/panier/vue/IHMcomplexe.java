@@ -23,11 +23,12 @@ public class IHMcomplexe extends javax.swing.JFrame implements Observer{
      */
     private Panier panier;
     private ArrayList<String> types;
+    private int indSelected=0;
     
     public IHMcomplexe(Panier p) {
         panier = p;
-        ControllerButton cb = new ControllerButton(panier);
         initTypes();
+        ControllerButton cb = new ControllerButton(panier,types.get(indSelected));
         initComponents();
         initComboBox();
         Moins.addActionListener(cb);
@@ -47,8 +48,7 @@ public class IHMcomplexe extends javax.swing.JFrame implements Observer{
     }
     @Override
     public void update(Observable o, Object arg) {        
-        Panier p = (Panier)o;
-        this.jLabel1.setText(p.getCapacite()+"");
+        
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -132,7 +132,7 @@ public class IHMcomplexe extends javax.swing.JFrame implements Observer{
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        try {
+    /*try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
@@ -147,7 +147,7 @@ public class IHMcomplexe extends javax.swing.JFrame implements Observer{
             java.util.logging.Logger.getLogger(IHMcomplexe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(IHMcomplexe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
+        }*/
         //</editor-fold>
 
         /* Create and display the form */
