@@ -38,6 +38,7 @@ public class App
         
         System.out.println(p.getPrix());*/
         
+        //test
         //TP2        
         Panier p = new Panier(40);
         Console c = new Console();
