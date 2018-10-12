@@ -52,7 +52,18 @@ public class Panier extends Observable{
         }
         
     }
-    
+    public void ajouter(String s){
+        String fruit="";
+        String origine="";
+        int indSeparation=s.indexOf(" de ");
+        if(indSeparation>0){
+            fruit=s.substring(0,indSeparation);
+            origine=s.substring(indSeparation+4);
+            if(fruit.equals("Orange")){
+                Orange newO=new Orange(1.0,origine);
+            }
+        }
+    }
     public void retirer(){
         if(!estVide()) {
             listeOrange.remove(listeOrange.size()-1);
