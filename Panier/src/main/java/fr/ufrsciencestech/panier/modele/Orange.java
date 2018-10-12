@@ -12,8 +12,8 @@ import java.util.Scanner;
  * @author ar948052
  */
 public class Orange extends Fruit{
-    private double prix;
-    private String origine;
+    /*private double prix;
+    private String origine;*/
     
     
     /*public double getPrix(){

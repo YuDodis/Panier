@@ -33,7 +33,6 @@ abstract class Fruit {
     public String toString()
     {
         String s="";
-        
         s+= "Fruit : "+this.getClass()+ " Origine : "+this.origine+" prix : "+ this.prix;
         return s;
     }
