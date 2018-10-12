@@ -14,7 +14,7 @@ import java.util.Scanner;
  * @author ar948052
  */
 public class Panier extends Observable{
-    private ArrayList<Fruit> listeOrange;
+    private ArrayList<Orange> listeOrange;
     private int capacitePanier = 5;
     
     public int getCapacite(){
@@ -44,7 +44,7 @@ public class Panier extends Observable{
         return 0 == listeOrange.size();
     }
     
-    public void ajouter(Fruit o){
+    public void ajouter(Orange o){
         if(!estPlein() && o != null){
             listeOrange.add(o);
             this.setChanged();
@@ -64,7 +64,7 @@ public class Panier extends Observable{
     public double getPrix(){
         double somme = 0;
         
-        for(Fruit o : listeOrange){
+        for(Orange o : listeOrange){
             somme += o.getPrix();
         }
         
@@ -72,9 +72,9 @@ public class Panier extends Observable{
     }
     
     public void boycotteOrigine(String s){        
-        ArrayList<Fruit> al = new ArrayList();
+        ArrayList<Orange> al = new ArrayList();
         
-        for(Fruit o: listeOrange){
+        for(Orange o: listeOrange){
             if(!o.getOrigine().equals(s)) al.add(o);
         }
         
@@ -84,7 +84,7 @@ public class Panier extends Observable{
     @Override
     public String toString(){
         String s = "";
-        for(Fruit o : listeOrange){
+        for(Orange o : listeOrange){
             s += o.toString() + "\n";
         } 
         return s;

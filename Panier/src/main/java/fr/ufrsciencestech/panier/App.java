@@ -1,6 +1,7 @@
 package fr.ufrsciencestech.panier;
 
 import fr.ufrsciencestech.panier.modele.Orange;
+import fr.ufrsciencestech.panier.modele.Cerise;
 import fr.ufrsciencestech.panier.modele.Panier;
 import fr.ufrsciencestech.panier.vue.Console;
 import fr.ufrsciencestech.panier.vue.FenetreAWT;
@@ -16,7 +17,7 @@ public class App
     {
         //Tests TP1
         //System.out.println( "Hello World!" );
-        
+        // COUCOU Olivierhh
         //Panier pVide = new Panier(2);
         
         /*p.ajouter(new Orange(5, "France"));
@@ -38,7 +39,6 @@ public class App
         
         System.out.println(p.getPrix());*/
         
-        //test
         //TP2        
         Panier p = new Panier(40);
         Console c = new Console();
@@ -49,11 +49,16 @@ public class App
         p.addObserver(fs);
         p.addObserver(fa);
         
+        p.ajouter(new Cerise(1.2, "Russie"));
+        p.ajouter(new Cerise(0.1, "France"));
+        p.ajouter(new Cerise(3.2, "Oui"));
         
         p.ajouter(new Orange(0.8, "Allemagne"));
         p.ajouter(new Orange(6.9, "Pologne"));
         p.ajouter(new Orange(5.6, "eee"));
-        p.ajouter(new Orange(5.5, "eeee"));
+        p.ajouter(new Orange(5.6, "eeee"));
+        p.ajouter(new Orange(5.6, "nouveau test"));
+
         p.retirer();
     }
 }
