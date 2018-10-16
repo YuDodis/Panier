@@ -38,7 +38,7 @@ public class PanierTest {
         p1 = new Panier(4);
         p2 = new Panier(4);
         pplein = new Panier(4);
-        o1 = new Orange(0.70, "Allemagne");
+        o1 = new Orange(1.0, "Allemagne");
         o2 = new Orange(0.50, "Espagne");
         p1.ajouter(o1);
         p2.ajouter(o1);
