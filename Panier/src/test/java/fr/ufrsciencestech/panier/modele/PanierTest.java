@@ -165,10 +165,10 @@ public class PanierTest {
         Orange omock2 = mock(Orange.class);
         when(omock1.getPrix()).thenReturn(1.0);
         when(omock2.getPrix()).thenReturn(0.5);
-        pvide.ajouter(omock1);
-        pvide.ajouter(omock2);
-        assertTrue(pvide.getCapacite() == 2);
-        assertTrue(pvide.getPrix() == 1.5);        
+        p2.ajouter(omock1);
+        p2.ajouter(omock2);
+        assertTrue(pvide.getCapacite() == 4);
+        assertTrue(pvide.getPrix() == 3.0);        
     }
     
 }
