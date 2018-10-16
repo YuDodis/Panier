@@ -157,18 +157,5 @@ public class PanierTest {
         Orange onull = null;
         p1.ajouter(onull);
         assertTrue(p1.getCapacite() == 1);
-    }
-    
-    @Test
-    public void testPrixPanierA2Oranges() {
-        Orange omock1 = mock(Orange.class);
-        Orange omock2 = mock(Orange.class);
-        when(omock1.getPrix()).thenReturn(1.0);
-        when(omock2.getPrix()).thenReturn(0.5);
-        p2.ajouter(omock1);
-        p2.ajouter(omock2);
-        assertTrue(pvide.getCapacite() == 2);
-        assertTrue(pvide.getPrix() == 3.0);        
-    }
-    
+    }    
 }
