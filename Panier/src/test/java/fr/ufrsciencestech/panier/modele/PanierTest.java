@@ -167,7 +167,7 @@ public class PanierTest {
         when(omock2.getPrix()).thenReturn(0.5);
         p2.ajouter(omock1);
         p2.ajouter(omock2);
-        assertTrue(pvide.getCapacite() == 4);
+        assertTrue(pvide.getCapacite() == 2);
         assertTrue(pvide.getPrix() == 3.0);        
     }
     
